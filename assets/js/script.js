@@ -135,6 +135,10 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
+form.addEventListener("submit", () => {
+  const btnText = document.querySelector("[data-form-btn] span");
+  btnText.innerText = "Sending...";
+});
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -157,3 +161,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+form.addEventListener("submit", () => {
+  const btnText = document.querySelector("[data-form-btn] span");
+  btnText.innerText = "Sending...";
+
+  setTimeout(() => {
+    btnText.innerText = "Send Message";
+    form.reset();
+  }, 2000);
+});
