@@ -772,7 +772,9 @@ main {
  */
 
 .timeline { margin-bottom: 30px; }
-
+.bold {
+  font-weight: 600;
+}
 .timeline .title-wrapper {
   display: flex;
   align-items: center;
@@ -1871,12 +1873,48 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+  .skills-container {
+    display: flex;
+    gap: 10px;              /* Space between the two lists */
+    align-items: flex-start;
+  }
 
+  .skills-container .skills-list {
+    flex: 1;                /* Both lists take equal width */
+  }
 
   /**
 	 * RESUME
 	 */
+  .resume-btn-container {
+    display: flex;
+    justify-content: flex-end; /* Moves button to the right */
+    margin-top: 20px;
+  }
 
+  .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #f5c542;
+  color: #222;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background: #e5b731;
+  transform: translateY(-2px);
+}
+
+.resume-btn ion-icon {
+  font-size: 20px;
+}
   .timeline-text { max-width: 700px; }
 
 }
